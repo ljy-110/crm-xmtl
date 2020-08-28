@@ -1,0 +1,101 @@
+<!--pages/adminEnterprise/adminEnterprise.wxml-->
+<view>
+   <view class="container">
+      <view class="page-section">
+         <view class="page-section-title" style="text-align: center;">
+            <text >审核企业信息</text>
+         </view>
+         <view class="flex-wrp" style="flex-direction:column;margin-top: 20px;">
+            <view class="flex-item flex-item-V demo-text-1">
+               <van-cell-group>
+               <van-field
+                     value="{{company}}"
+                     label="公司名"
+                     clearable
+                     readonly
+                     placeholder="请输入公司名称"
+                  />
+               <van-field
+                  value="{{phone}}"
+                  label="联系电话"
+                  clearable
+                  readonly
+                  type='number'
+                  placeholder="请输入电话号码"
+               />
+               <van-field
+                  value="{{bossName}}"
+                  label="老板称呼"
+                  clearable
+                  readonly
+                  placeholder="请输入老板称呼"
+               />
+               
+               </van-cell-group>
+               
+                  <view class="section" style="margin-top: 10px;">
+                     <label style="margin-left: 16px;font-size: 14px;">特殊信息</label>
+                     <textarea class="textarea" value='{{text}}' bindblur="bindTextAreaBlur" 
+                     placeholder="陈总想搞智能终端联盟链,用于给广告赋能。" 
+                     placeholder-style="font-size: 14px;margin-top:10px;"
+                     disabled />
+                </view>
+               
+               
+                     <van-field
+                     value="{{recommend}}"
+                     clearable
+                     readonly
+                     label="六度销售经理"
+                     placeholder="请输入六度销售经理（可选）"
+                  />
+                  <van-field
+                     value="{{recommendPhone}}"
+                     clearable
+                     readonly
+                     type='number'
+                     label="销售经理号码"
+                     placeholder="请输入销售经理电话号码（可选）"
+                  />
+            </view>
+            <view class="flex-item flex-item-V demo-text-2 admin" style="text-align: center;margin-top: 20px;">
+               <van-button round bind:click='getPass' size='small' type="info">通过</van-button>
+               <van-button round bind:click='upPass' size='small' type="info">拒绝</van-button>
+            </view>
+            <van-dialog
+        use-slot
+        title="客服电话"
+        show="{{ show }}"
+        show-cancel-button
+        bind:getuserinfo="getUserInfo"
+      >
+      <van-field
+      value="{{company}}"
+      label="公司名"
+      clearable
+      readonly
+      placeholder="请输入公司名称"
+   />
+<van-field
+   value="{{phone}}"
+   label="联系电话"
+   clearable
+   readonly
+   placeholder="请输入电话号码"
+/>
+<van-field
+   value="{{bossName}}"
+   label="老板称呼"
+   clearable
+   readonly
+   placeholder="请输入老板称呼"
+/>
+      </van-dialog>
+            <view class="flex-item flex-item-V demo-text-3">
+               
+            </view>
+         </view>
+      </view>
+   </view>
+</view>
+

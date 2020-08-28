@@ -1,0 +1,27 @@
+{
+   "pages": [
+      "pages/login4/login4",
+      "pages/login/login",
+      "pages/taskAdmin/taskAdmin",
+      "pages/addEnterprise/addEnterprise",
+      "pages/adminEnterprise/adminEnterprise",
+      "pages/taskUser/taskUser",
+      "pages/index/index",
+      "pages/register/register"
+   ],
+   "window": {
+      "backgroundTextStyle": "dark",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "6DGS 客户管理系统",
+      "navigationBarTextStyle": "black"
+   },
+   "sitemapLocation": "sitemap.json",
+   "usingComponents": {
+      "van-field": "vant-weapp/field/index",
+      "van-button": "vant-weapp/button/index",
+      "van-dialog": "vant-weapp/dialog/index",
+      "van-row": "vant-weapp/row/index",
+      "van-col": "vant-weapp/col/index",
+      "van-toast": "vant-weapp/toast/index"
+   }
+}

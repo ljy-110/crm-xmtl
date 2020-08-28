@@ -1,0 +1,38 @@
+<view>
+   <view style="margin-top: 10px;">
+      <van-row style="text-align: center;">
+         <!-- <van-col bindtap='addEnterprise'  span="12">导出列表</van-col> -->
+         <van-col bindtap='fastRead'  offset="14" span="8">快速审核</van-col>
+       </van-row>
+   </view>
+   <view style="margin-top: 30px;text-align: center;font-weight: 700;">
+      <van-row gutter="20">
+         <van-col span="8">时间</van-col>
+         <van-col span="8">区块ID</van-col>
+         <van-col span="8">状态</van-col>
+       </van-row>
+   </view>
+   <view style="text-align: center;font-size: 12px;padding-left: 10px;">
+      <view style="text-align: center;font-size: 12px;">
+         <van-row gutter="20" class="data" bindtap='getCom' data-token="{{item.token_y}}" style="height: 25px;line-height: 25px;" wx:for='{{getTaskInfoList}}' wx:key="token_y">
+            <van-col span="8">{{item.time}}</van-col>
+            <van-col span="8">{{item.token_y}}</van-col>
+            <van-col span="8">
+               <text wx:if='{{item.status == 1}}'>待审核</text>
+               <text wx:elif='{{item.status == 2}}'>通过</text>
+               <text wx:else>已拒绝</text>
+            </van-col>
+          </van-row>
+          <view wx:if='{{getTaskInfoList.length == 0}}' style="text-align: center;margin-top: 100px;">
+            还没有数据
+         </view>
+      </view>
+         <!-- <van-row gutter="20" class="data" bindtap='getCom'>
+         <van-col span="8">2020年7月27日09:43:31</van-col>
+         <van-col span="8">83aa400af464c76d</van-col>
+         <van-col span="8">审核中</van-col>
+       </van-row> -->
+      
+      
+   </view>
+</view>

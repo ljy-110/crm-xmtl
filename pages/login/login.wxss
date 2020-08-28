@@ -1,0 +1,10 @@
+/* pages/login/login.wxss */
+.van-button--small{
+   width: 200px;
+}
+.van-dialog__header{
+  padding-bottom: 30px;
+}
+.van-dialog__footer{
+  margin-top: 30px;
+}

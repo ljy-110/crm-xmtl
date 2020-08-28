@@ -1,0 +1,4 @@
+/* pages/taskAdmin/taskAdmin.wxss */
+.data .van-row{
+   margin-top: 10px;
+}

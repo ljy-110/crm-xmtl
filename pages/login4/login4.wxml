@@ -1,0 +1,41 @@
+<!--pages/login4/login4.wxml-->
+<view>
+  <view class="userinfo">
+    <block>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="../../img/timg.jpg" mode="cover"></image>
+    </block>
+  </view>
+  <!-- <view class="page-section-title" style="text-align:center;margin-top: 100rpx;font-size: 18px;">
+    <text >6DGS 客户管理系统</text>
+ </view> -->
+<view class="login">
+   <button class='phone-text'  open-type="getUserInfo"  lang="zh_CN" bindgetuserinfo="onGotUserInfo">一键登录</button>
+</view>
+   
+<!-- 登录弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <view><image src='../../img/gb.png' bindtap='hideModal' class='show'></image></view>
+    <view>绑定手机号</view>
+    <view>第一次登陆请先绑定手机号</view>  
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" type="number"  bindblur='getPhone' placeholder="请先输入手机号" />
+        </view>
+      </view>
+    </view>
+    <button  bindtap="getPhoneNumber">
+      一键绑定
+    </button>
+  </view>
+</view>
+<view class="flex-item flex-item-V demo-text-3">
+  <view class="page-section-title" style="text-align: center;margin-top: 35px;font-size: 14px;color: #888888;">
+     <text style="margin-right: 120px;" bindtap="dialog">联系客服</text>
+     <text bindtap='register'>管理员登陆</text>
+  </view>
+</view>
+<view style="font-size: 14px;color: #ccc;text-align: center;margin-top: 150px;">6DGS云—做您信赖的伙伴</view>
+</view>

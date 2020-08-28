@@ -1,0 +1,4 @@
+/* pages/register/register.wxss */
+.regins van-button .van-button--small{
+   width: 200px;
+}

@@ -1,0 +1,34 @@
+<view>
+      <view style="margin-top: 10px;">
+         <van-row>
+            <van-col bindtap='addEnterprise'  offset="18" span="8">添加信息</van-col>
+          </van-row>
+      </view>
+      <view style="margin-top: 20px;">
+         <van-row style="font-size: 26px;color: rgb(0,153,255);text-align: center;">
+            已通过\t {{finish_num}} \t 个
+          </van-row>
+      </view>
+      <view style="margin-top: 20px;text-align: center;font-weight: 700;">
+         <van-row gutter="20">
+            <van-col span="8">时间</van-col>
+            <van-col span="8">区块ID</van-col>
+            <van-col span="8">状态</van-col>
+          </van-row>
+      </view>
+      <view style="text-align: center;font-size: 12px;padding-left: 10px;">
+         <van-row gutter="20" class="data" bindtap='getupdateNew' data-token="{{item.token_y}}" style="height: 25px;line-height: 25px;" wx:for='{{getTaskInfoList}}' wx:key="token_y">
+            <van-col span="8">{{item.time}}</van-col>
+            <van-col span="8">{{item.token_y}}</van-col>
+            <van-col span="8">
+               <text wx:if='{{item.status == 1}}'>审核中</text>
+               <text wx:elif='{{item.status == 2}}'>通过</text>
+               <text wx:else>已拒绝</text>
+            </van-col>
+            
+          </van-row>
+      </view>
+      <view wx:if='{{getTaskInfoList.length == 0}}' style="text-align: center;margin-top: 100px;">
+         还没有数据
+      </view>
+</view>

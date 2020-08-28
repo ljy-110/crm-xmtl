@@ -1,0 +1,51 @@
+/**index.wxss**/
+page {
+  background-color: rgb(248,249,251);
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contion{
+  padding: 15px;
+  border-radius: 5px;
+}
+.card{
+  /* border: 1px solid #aaa; */
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: white;
+  box-shadow:2px 2px 10px #909090;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.title{
+  /* height: 65px; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #4D4D4D;
+  font-size: 12px;
+}
+.text-title{
+  padding: 5px 10px 10px 10px;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.fiex{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
